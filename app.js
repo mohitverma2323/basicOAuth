@@ -10,9 +10,10 @@ var session = require('express-session');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var auth = require('./routes/auth');
+var mongoose = require('mongoose');
 
 var app = express();
-
+var db = mongoose.connect('mongodb://localhost/socialAgg');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
